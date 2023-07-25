@@ -1,18 +1,81 @@
-package Exceptiontest_1;
-
-/* ¿¹¿ÜÀÇ Á¾·ù
- * 1: ºñÃ¼Å© ¿¹¿Ü(RuntimeExceptionÀÇ ÀÚ¼Õ °´Ã¼) > ¿¹¿ÜÃ³¸® ÇÊ¼ö X
- * 2: Ã¼Å©¿¹¿Ü (³ª¸ÓÁö Exception Å¬·¡½ºÀÇ ÀÚ¼Õ°´Ã¼) > ¿¹¿ÜÃ³¸® ÇÊ¼ö
- * 	2-1: ¿¹¿ÜÃ³¸® ¹®¹ı > throws ÇØ¼­ ´øÁö±â
- * 	2-2: try-catch-finally·Î ¹¹ÇÒÁö Àû±â
- */	
-
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 public class test {
-	public static void main(String[] args) throws InterruptedException {
-		for(int i = 10; i < 10; i--) {
-			Thread.sleep(1000);
-			System.out.println(i);
-		}
-	}
+
+    static class point {
+        public point() {
+        }
+        public point(int x, int y) {
+            this.cur_x = x;
+            this.cur_y = y;
+        }
+        int cur_x;
+        int cur_y;
+    }
+
+    static boolean visit[][];
+    static int map[][];
+    static int N, M;
+    static point start;
+    static int[] dx = {1, 0, -1, 0};
+    static int[] dy = {0, -1, 0, 1};
+
+    public static int bfs(point p) {
+        Queue<point> queue = new LinkedList<>();
+        queue.offer(p);
+        visit[p.cur_x][p.cur_y] = true;
+
+        int count = 1;// ï¿½ë–ï¿½ë‹”1 : ç¥ë‡ë¦°ï¿½ì†•ï¿½ë’— ï¿½ìŸ¾ï¿½ë¿­ è¹‚ï¿½ï¿½ë‹”åª›ï¿½ ï¿½ë¸˜ï¿½ë•²ï¿½ì”ª ï¿½ë¿¬æ¹²ê³—ê½Œ ï¿½ì” çŒ·â‘¥ë¼±ï¿½ì¡‡ï¿½ë¹ï¿½ë§–..!
+
+        while (!queue.isEmpty()) {
+            point tmp_p = queue.poll();
+            int x = tmp_p.cur_x;
+            int y = tmp_p.cur_y;
+
+            for (int i = 0; i < 4; i++) {
+                int nx = x + dx[i];
+                int ny = y + dy[i];
+                if (1 <= nx && nx <= N && 1 <= ny && ny <= M) {
+                    if (map[nx][ny] == 1 && visit[nx][ny] == false) {
+                        point np = new point(nx, ny);
+                        queue.offer(np);
+                        visit[nx][ny] = true;
+                        map[nx][ny] = map[x][y] + 1;
+                        // å¯ƒìˆì¤ˆï¿½ì“½ æ¹²ëª„ì”  update..! ï¿½ì”  éºï¿½éºê¾©ì“£ ï¿½ë¼±ï¿½ë¼¸å¯ƒï¿½ ï¿½ë²ï¿½ë’—ï§ï¿½ï¿½ë¿‰ ï¿½ï¿½ï¿½ë¹ï¿½ê½Œ æ€¨ì¢Šï¿½ï¿½ ï¿½ë¸· ï¿½ë¸˜ï¿½ìŠ‚ï¿½ê½¦ï¿½ì”  ï¿½ì—³å¯ƒì¢‰ë„ç™’ï¿½
+                        // bfs è‡¾ëª„ì £ï¿½ë’— ï¿½ì” ï§ŸìŒì“£ ï¿½ë¼±ï¿½ë¼¸å¯ƒï¿½ ï¿½ì ™ï¿½ë¸¯ï¿½ë’—ï§ï¿½åª›ï¿½ ï¿½ë¹‘ï¿½ë––ï¿½ì”¤ï¿½ë²
+                    }
+                }
+            }
+        }
+        return map[N][M];
+    }
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String[] str = br.readLine().split(" ");
+
+        N = Integer.parseInt(str[0]);
+        M = Integer.parseInt(str[1]);
+
+        visit = new boolean[N + 1][M + 1];
+        map = new int[N + 1][M + 1];
+
+        for (int j = 1; j <= N; j++) {
+            String input = br.readLine();
+            for (int i = 1; i <= M; i++) {
+                map[j][i] = input.charAt(i - 1) - '0';// ï¿½ë–ï¿½ë‹” 2: -'0' ï¿½ë¹ä»¥ì„ë¹ï§ï¿½ ï¿½ë‹½ï¿½ì˜„åª›ï¿½ ï¿½ë§–
+            }
+        }// ï¿½ë–ï¿½ë‹” 3: Nï¿½ì” ï¿½ì˜‰ M æ€¨ê¾©ëƒ½ ï¿½ë¿·åª›ëˆâ”ï¿½ê½•
+
+        start = new point(1, 1);
+
+        System.out.println(bfs(start));
+
+    }
 }
