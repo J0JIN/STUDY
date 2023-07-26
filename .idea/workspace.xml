@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9ec247a-267c-44b3-9122-7dcc1797d45c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SSAFY_home/date_0721/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSAFY_home/date_0721/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/백준/구현/Solution/src/Sol_1929_소수구하기.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSAFY_home/date_0721/src/실습7_2/IUserManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSAFY_home/date_0721/src/실습7_2/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSAFY_home/date_0721/src/실습7_2/UserManagerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSAFY_home/date_0721/src/실습7_2/UserTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSAFY_home/date_0721/src/실습7_2/VipUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/백준/구현/Solution/src/Sol_14503_로봇청소기.java" beforeDir="false" afterPath="$PROJECT_DIR$/백준/구현/Solution/src/Sol_14503_로봇청소기.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
