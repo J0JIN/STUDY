@@ -17,7 +17,7 @@ public class Sol_2851_½´ÆÛ¸¶¸®¿À {
 		int ans_under = Integer.MAX_VALUE;
 		int ans_over = Integer.MAX_VALUE;
 		int ans = Integer.MAX_VALUE;
-		boolean a = true;
+		boolean over100 = false;
 
 		for (int i = 0; i < 10; i++) {
 			sum += arr[i];
@@ -34,12 +34,12 @@ public class Sol_2851_½´ÆÛ¸¶¸®¿À {
 				if (over - 100 < ans_under) {
 					ans_over = over;
 				}
-				a = false;
+				over100 = true;
 				break;
 			}
 		}
 
-		if (a == false) {
+		if (over100 == true) {
 			if (100 - ans_under < ans_over - 100) {
 				ans = ans_under;
 			} else {
