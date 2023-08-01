@@ -1,0 +1,82 @@
+package date_0731;
+
+import java.nio.Buffer;
+import java.util.Scanner;
+
+public class Test5 {
+
+	public static int[][] map;
+
+	public static int[][][] win = 
+			{ { { 1, 0 }, { 2, 0 }, { 3, 0 }, { 4, 0 } },
+			{ { 1, 1 }, { 2, 2 }, { 3, 3 }, { 4, 4 } }, 
+			{ { 1, -1 }, { 2, -2 }, { 3, -3 }, { 4, -4 } },
+			{ { 0, -1 }, { 0, -2 }, { 0, -3 }, { 0, -4 } } };
+
+	public static void check() {
+
+		for (int j = 1; j <= 19; j++) {
+			for (int i = 1; i <= 19; i++) {
+
+				if (map[i][j] == 1) {
+					for (int k = 0; k < 4; k++) {
+						int n1x = i + win[k][0][0];
+						int n1y = j + win[k][0][1];
+						int n2x = i + win[k][1][0];
+						int n2y = j + win[k][1][1];
+						int n3x = i + win[k][2][0];
+						int n3y = j + win[k][2][1];
+						int n4x = i + win[k][3][0];
+						int n4y = j + win[k][3][1];
+
+						if (map[n1x][n1y] == 1 && map[n2x][n2y] == 1 && map[n3x][n3y] == 1 && map[n4x][n4y] == 1) {
+							System.out.println("1");
+							System.out.println(j + " " + i);
+							return;
+						}
+
+					}
+
+				}
+
+				if (map[i][j] == 2) {
+					for (int k = 0; k < 4; k++) {
+						int n1x = i + win[k][0][0];
+						int n1y = j + win[k][0][1];
+						int n2x = i + win[k][1][0];
+						int n2y = j + win[k][1][1];
+						int n3x = i + win[k][2][0];
+						int n3y = j + win[k][2][1];
+						int n4x = i + win[k][3][0];
+						int n4y = j + win[k][3][1];
+
+						if (map[n1x][n1y] == 2 && map[n2x][n2y] == 2 && map[n3x][n3y] == 2 && map[n4x][n4y] == 2) {
+							System.out.println("2");
+							System.out.println(j + " " + i);
+							return;
+						}
+
+					}
+				}
+
+			}
+		}
+
+		System.out.println("0");
+		return;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		map = new int[20][20];
+
+		for (int j = 1; j <= 19; j++) {
+			for (int i = 1; i <= 19; i++) {
+				map[i][j] = sc.nextInt();
+			}
+		}
+		check();
+	}
+}
+
