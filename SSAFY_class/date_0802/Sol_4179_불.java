@@ -1,5 +1,3 @@
-package date_0802;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,7 +17,6 @@ public class Sol_4179_불 {
 	static int[] dx = { 1, 0, -1, 0 };
 	static int[] dy = { 0, -1, 0, 1 };
 
-	static int count = 0;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -39,17 +36,17 @@ public class Sol_4179_불 {
 			for (int i = 1; i <= C; i++) {
 				map[i][j] = input.charAt(i - 1);
 				if (map[i][j] == 'J') {
-					queue.add(new int[] { i, j, 0 });
+					queue.add(new int[] { i, j, 0 ,0});
 					visitJ[i][j] = true;
 				}
 				if (map[i][j] == 'F') {
-					queue.add(new int[] { i, j, 1 });
+					queue.add(new int[] { i, j, 1 ,0});
 					visitF[i][j] = true;
 				}
 			}
 		}
 
-		Jrun();
+		Frun();
 	}
 
 	public static void Jrun() {
@@ -71,7 +68,7 @@ public class Sol_4179_불 {
 					}
 
 					if (nx < 1 || nx > C || ny < 1 || ny > R) {
-						System.out.println(count + 1);
+						System.out.println(tmp[3]+1);
 						queue.clear();
 						return;
 					}
@@ -82,17 +79,12 @@ public class Sol_4179_불 {
 							map[cx][cy] = '.';
 						}
 						visitJ[nx][ny] = true;
-						queue.offer(new int[] { nx, ny, 0 });
+						queue.offer(new int[] { nx, ny, 0 , tmp[3]+1});
 					}
 
 				}
 
-//				if (noway) {
-//					System.out.println("IMPOSSIBLE");
-//					queue.clear();
-//					return;
-//				}
-				count++;
+				System.out.println("J");
 				print();
 			} else {
 				Frun();
@@ -113,12 +105,6 @@ public class Sol_4179_불 {
 				for (int i = 0; i < 4; i++) {
 					int nx = cx + dx[i];
 					int ny = cy + dy[i];
-					
-//					if (map[nx][ny] == 'J') {
-//						System.out.println("IMPOSSIBLE");
-//						queue.clear();
-//						return;
-//					}
 
 					if (1 <= nx && nx <= C && 1 <= ny && ny <= R && map[nx][ny] != '#' && visitF[nx][ny] == false) {
 						map[nx][ny] = 'F';
@@ -126,10 +112,9 @@ public class Sol_4179_불 {
 						queue.offer(new int[] { nx, ny, 1 });
 					}
 
-
 				}
+				System.out.println("F");
 				print();
-
 			} else {
 				Jrun();
 			}
@@ -143,5 +128,6 @@ public class Sol_4179_불 {
 			}
 			System.out.println();
 		}
+		System.out.println("========================");
 	}
 }

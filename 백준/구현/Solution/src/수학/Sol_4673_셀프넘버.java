@@ -1,3 +1,5 @@
+package 수학;
+
 public class Sol_4673_셀프넘버 {
 
     public static int dn(int n) {

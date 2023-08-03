@@ -1,122 +1,124 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.StringTokenizer;
 
 public class Sol_4179_불 {
     // 지훈이동
     // 불 확산
 
+    static Queue<int[]> queue;
+
     static char[][] map;
     static boolean[][] visitJ;
     static boolean[][] visitF;
     static int R, C;
-    static int[] dx = {1, 0, -1, 0};
-    static int[] dy = {0, -1, 0, 1};
+    static int[] dx = { 1, 0, -1, 0 };
+    static int[] dy = { 0, -1, 0, 1 };
 
-    static int count = 0;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String[] str = br.readLine().split(" ");
 
-        R = Integer.parseInt(str[0]); //Row = y
-        C = Integer.parseInt(str[1]); //Col = x
+        R = Integer.parseInt(str[0]); // Row = y
+        C = Integer.parseInt(str[1]); // Col = x
 
         map = new char[C + 2][R + 2];
         visitJ = new boolean[C + 2][R + 2];
         visitF = new boolean[C + 2][R + 2];
-
-        int Jstart_x = 0;
-        int Jstart_y = 0;
-        int Fstart_x = 0;
-        int Fstart_y = 0;
+        queue = new LinkedList<>();
 
         for (int j = 1; j <= R; j++) {
             String input = br.readLine();
             for (int i = 1; i <= C; i++) {
                 map[i][j] = input.charAt(i - 1);
                 if (map[i][j] == 'J') {
-                    Jstart_x = i;
-                    Jstart_y = j;
+                    queue.add(new int[] { i, j, 0 ,0});
+                    visitJ[i][j] = true;
                 }
                 if (map[i][j] == 'F') {
-                    Fstart_x = i;
-                    Fstart_y = j;
+                    queue.add(new int[] { i, j, 1 ,0});
+                    visitF[i][j] = true;
                 }
             }
         }
 
-        Jrun(Jstart_x, Jstart_y);
-
+        Frun();
     }
 
-    public static void Jrun(int x, int y) {
-        Queue<int[]> jq = new LinkedList<>();
-        jq.offer(new int[]{x, y});
-        visitJ[x][y] = true;
+    public static void Jrun() {
+        while (!queue.isEmpty()) {
+            int[] tmp = queue.peek();
 
-        int count = 0;
+            if (tmp[2] == 0) {
+                tmp = queue.poll();
+                int cx = tmp[0];
+                int cy = tmp[1];
+                boolean noway = true;
 
-        while (!jq.isEmpty()) {
-            count++;
-            int[] tmp = jq.poll();
-            int cx = tmp[0];
-            int cy = tmp[1];
+                for (int i = 0; i < 4; i++) {
+                    int nx = cx + dx[i];
+                    int ny = cy + dy[i];
 
-            Frun();
+                    if (map[nx][ny] == '.') {
+                        noway = false;
+                    }
 
-            for (int i = 0; i < 4; i++) {
-                int nx = cx + dx[i];
-                int ny = cy + dy[i];
+                    if (nx < 1 || nx > C || ny < 1 || ny > R) {
+                        System.out.println(tmp[3]+1);
+                        queue.clear();
+                        return;
+                    }
 
-                if (nx < 1 || nx > C || ny < 1 || ny > R) {
-                    System.out.println(count-1);
-                    return;
+                    if (map[nx][ny] != 'F' && map[nx][ny] != '#' && visitJ[nx][ny] == false) {
+                        map[nx][ny] = 'J';
+                        if (map[cx][cy] != 'F') {
+                            map[cx][cy] = '.';
+                        }
+                        visitJ[nx][ny] = true;
+                        queue.offer(new int[] { nx, ny, 0 , tmp[3]+1});
+                    }
+
                 }
 
-                if (map[ny][nx] != '#' && visitJ[ny][nx] == false) {
-                    visitJ[ny][nx] = true;
-                    jq.offer(new int[]{nx, ny});
-                }
+//                System.out.println("J");
+                print();
+            } else {
+                Frun();
             }
-
         }
-
     }
 
     private static void Frun() {
-        // 확산이 맛탱이가 가버렸네 바로 리턴하자니 맨 처음칸만 확산하고 말고
-        // 안하자니 전부 불타버리고
-        // BFS 느낌으로 리스트에 저장하고 바꿔야될듯
-        // 애초에 BFS였음 ㅎ
-        Queue<int[]> fq = new LinkedList<>();
+        while (!queue.isEmpty()) {
+            int[] tmp = queue.peek();
 
-        for (int j = 1; j <= R; j++) {
-            for (int i = 1; i <= C; i++) {
-                if (map[i][j] == 'F') {
-                    fq.offer(new int[]{i, j});
+            if (tmp[2] == 1) {
+                tmp = queue.poll();
+
+                int cx = tmp[0];
+                int cy = tmp[1];
+
+                for (int i = 0; i < 4; i++) {
+                    int nx = cx + dx[i];
+                    int ny = cy + dy[i];
+
+                    if (1 <= nx && nx <= C && 1 <= ny && ny <= R && map[nx][ny] != '#' && visitF[nx][ny] == false) {
+                        map[nx][ny] = 'F';
+                        visitF[nx][ny] = true;
+                        queue.offer(new int[] { nx, ny, 1 });
+                    }
+
                 }
+//                System.out.println("F");
+                print();
+            } else {
+                Jrun();
             }
         }
-
-        while (!fq.isEmpty()) {
-            int[] tmp = fq.poll();
-            for (int d = 0; d < 4; d++) {
-                int nx = tmp[0] + dx[d];
-                int ny = tmp[1] + dy[d];
-
-                if (1 <= nx && nx <= C && 1 <= ny && ny <= R && map[nx][ny] != '#') {
-                    map[nx][ny] = 'F';
-                    fq.offer(new int[]{nx, ny});
-                }
-            }
-        }
-        return;
     }
 
     public static void print() {
@@ -126,5 +128,7 @@ public class Sol_4179_불 {
             }
             System.out.println();
         }
+        System.out.println("========================");
     }
-}
+}// 걍 Queue 두개로 나눠 풀래 조건 갱신이 동시에 안되가지고 곱창나네 진짜;;
+//
