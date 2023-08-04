@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dacf563-3a1b-49da-a3e3-36c62f4a55b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../백준/구현/Solution/src/Sol_11401_이항계수2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../백준/구현/Solution/src/못푼문제/Sol_11401_이항계수3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../알고리즘 스터디/_3_Week/src/Sol_2667_단지번호DFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../알고리즘 스터디/_3_Week/src/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SSAFY_class/date_0802/Sol_4179_불.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SSAFY_class/date_0802/Sol_4179_불.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../백준/구현/Solution/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../백준/구현/Solution/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../백준/구현/Solution/src/Sol_11050_이항계수1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../백준/구현/Solution/src/Sol_11050_이항계수1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../알고리즘 스터디/_3_Week/src/Sol_4179_불.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../알고리즘 스터디/_3_Week/src/Sol_4179_불.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +27,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/Javaworkspace/알고리즘 스터디/_3_Week"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
