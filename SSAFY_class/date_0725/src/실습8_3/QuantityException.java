@@ -1,11 +1,11 @@
-package ½Ç½À8_3;
+package ì‹¤ìŠµ8_3;
 
 /**
- * ¼ö·®ÀÌ ºÎÁ·ÇÑ »óÈ²À» ³ªÅ¸³»´Â ¿¹¿ÜÅ¬·¡½º
+ * ìˆ˜ëŸ‰ì´ ë¶€ì¡±í•œ ìƒí™©ì„ ë‚˜íƒ€ë‚´ëŠ” ì˜ˆì™¸í´ë˜ìŠ¤
  */
 public class QuantityException extends Exception {
 
 	public QuantityException() {
-		super("¼ö·®ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+		super("ìˆ˜ëŸ‰ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 	}
 }

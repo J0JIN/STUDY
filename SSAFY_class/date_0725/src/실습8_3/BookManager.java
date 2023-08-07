@@ -1,4 +1,4 @@
-package ½Ç½À8_3;
+package ì‹¤ìŠµ8_3;
 
 import java.awt.List;
 import java.security.KeyStore.Entry;
@@ -9,51 +9,51 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
 
-import ½Ç½À8_3.ISBNNotFoundException;
+import ì‹¤ìŠµ8_3.ISBNNotFoundException;
 
 public class BookManager implements IBookManager {
 	/**
-	 * °ü¸®ÇÒ ÃÖ´ë µµ¼­ ¼ö
+	 * ê´€ë¦¬í•  ìµœëŒ€ ë„ì„œ ìˆ˜
 	 */
 	private static int MAX_SIZE = 100;
 
 	private static int size = 0;
 	/**
-	 * °ü¸®ÇÒ µµ¼­ ¸®½ºÆ®
+	 * ê´€ë¦¬í•  ë„ì„œ ë¦¬ìŠ¤íŠ¸
 	 */
 	private HashMap<String, Book> books = new HashMap<String, Book>();
 
 	/**
-	 * µµ¼­¸¦ µµ¼­¸®½ºÆ®¿¡ Ãß°¡ÇÑ´Ù.
+	 * ë„ì„œë¥¼ ë„ì„œë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€í•œë‹¤.
 	 *
-	 * @param book : Ãß°¡ÇÒ µµ¼­
+	 * @param book : ì¶”ê°€í•  ë„ì„œ
 	 */
 	public void add(Book book) {
 		books.put(book.getIsbn(), book);
 	}
 
 	/**
-	 * °íÀ¯¹øÈ£·Î ÇØ´ç µµ¼­¸¦ µµ¼­¸®½ºÆ®¿¡¼­ »èÁ¦ÇÑ´Ù.
+	 * ê³ ìœ ë²ˆí˜¸ë¡œ í•´ë‹¹ ë„ì„œë¥¼ ë„ì„œë¦¬ìŠ¤íŠ¸ì—ì„œ ì‚­ì œí•œë‹¤.
 	 *
-	 * @param isbn : »èÁ¦ÇÒ µµ¼­ÀÇ °íÀ¯¹øÈ£
+	 * @param isbn : ì‚­ì œí•  ë„ì„œì˜ ê³ ìœ ë²ˆí˜¸
 	 */
 	public void remove(String isbn) {
 		books.remove(isbn);
 	}
 
 	/**
-	 * µî·ÏµÈ µµ¼­¸®½ºÆ®¸¦ ¹İÈ¯ÇÑ´Ù.
+	 * ë“±ë¡ëœ ë„ì„œë¦¬ìŠ¤íŠ¸ë¥¼ ë°˜í™˜í•œë‹¤.
 	 *
-	 * @return µî·ÏµÈ ÀüÃ¼ µµ¼­¸®½ºÆ®
+	 * @return ë“±ë¡ëœ ì „ì²´ ë„ì„œë¦¬ìŠ¤íŠ¸
 	 */
 	public HashMap<String, Book> getList() {
 		return books;
 	}
 
 	/**
-	 * µî·ÏµÈ ÀÏ¹İ µµ¼­ ¸®½ºÆ®¸¦ ¹İÈ¯ÇÑ´Ù.
+	 * ë“±ë¡ëœ ì¼ë°˜ ë„ì„œ ë¦¬ìŠ¤íŠ¸ë¥¼ ë°˜í™˜í•œë‹¤.
 	 *
-	 * @return µî·ÏµÈ ÀÏ¹İ µµ¼­¸®½ºÆ®
+	 * @return ë“±ë¡ëœ ì¼ë°˜ ë„ì„œë¦¬ìŠ¤íŠ¸
 	 */
 	public HashMap<String, Book> getBooks() {
 		HashMap<String, Book> listBook = new HashMap<String, Book>();
@@ -72,9 +72,9 @@ public class BookManager implements IBookManager {
 	}
 
 	/**
-	 * µî·ÏµÈ ¸Å°ÅÁø¸®½ºÆ®¸¦ ¹İÈ¯ÇÑ´Ù.
+	 * ë“±ë¡ëœ ë§¤ê±°ì§„ë¦¬ìŠ¤íŠ¸ë¥¼ ë°˜í™˜í•œë‹¤.
 	 *
-	 * @return µî·ÏµÈ ¸Å°ÅÁø ¸®½ºÆ®
+	 * @return ë“±ë¡ëœ ë§¤ê±°ì§„ ë¦¬ìŠ¤íŠ¸
 	 */
 	public HashMap<String, Book> getMagazines() {
 		HashMap<String, Book> listMagazine = new HashMap<String, Book>();
@@ -93,10 +93,10 @@ public class BookManager implements IBookManager {
 	}
 
 	/**
-	 * °íÀ¯¹øÈ£·Î ÇØ´ç µµ¼­¸¦ Á¶È¸ÇÑ´Ù.
+	 * ê³ ìœ ë²ˆí˜¸ë¡œ í•´ë‹¹ ë„ì„œë¥¼ ì¡°íšŒí•œë‹¤.
 	 *
-	 * @param isbn : Á¶È¸ÇÒ µµ¼­ÀÇ °íÀ¯¹øÈ£
-	 * @return °íÀ¯¹øÈ£¿¡ ÇØ´çÇÏ´Â µµ¼­
+	 * @param isbn : ì¡°íšŒí•  ë„ì„œì˜ ê³ ìœ ë²ˆí˜¸
+	 * @return ê³ ìœ ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ë„ì„œ
 	 */
 	public HashMap<String, Book> searchByIsbn(String isbn) throws ISBNNotFoundException{
 		HashMap<String, Book> listBook = new HashMap<String, Book>();
@@ -115,10 +115,10 @@ public class BookManager implements IBookManager {
 	}
 
 	/**
-	 * °íÀ¯¹øÈ£·Î ÇØ´ç µµ¼­¸¦ Á¶È¸ÇÑ´Ù.
+	 * ê³ ìœ ë²ˆí˜¸ë¡œ í•´ë‹¹ ë„ì„œë¥¼ ì¡°íšŒí•œë‹¤.
 	 *
-	 * @param isbn : Á¶È¸ÇÒ µµ¼­ÀÇ °íÀ¯¹øÈ£
-	 * @return °íÀ¯¹øÈ£¿¡ ÇØ´çÇÏ´Â µµ¼­
+	 * @param isbn : ì¡°íšŒí•  ë„ì„œì˜ ê³ ìœ ë²ˆí˜¸
+	 * @return ê³ ìœ ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ë„ì„œ
 	 */
 	public HashMap<String, Book> searchByTitle(String title) {
 		HashMap<String, Book> listBook = new HashMap<String, Book>();
@@ -150,9 +150,9 @@ public class BookManager implements IBookManager {
 	}
 
 	/**
-	 * µµ¼­°¡°İÀÇ Æò±ÕÀ» ¹İÈ¯ÇÑ´Ù.
+	 * ë„ì„œê°€ê²©ì˜ í‰ê· ì„ ë°˜í™˜í•œë‹¤.
 	 *
-	 * @return ¸ğµç µµ¼­ °¡°İÀÇ Æò±Õ
+	 * @return ëª¨ë“  ë„ì„œ ê°€ê²©ì˜ í‰ê· 
 	 */
 	public double getPriceAvg() {
 		return (double) getTotalPrice() / books.size();

@@ -1,28 +1,28 @@
-package ½Ç½À8_3;
+package ì‹¤ìŠµ8_3;
 
 public class Book {
-	/** °íÀ¯ ¹øÈ£ */
+	/** ê³ ìœ  ë²ˆí˜¸ */
 	private String isbn;
-	/** Á¦¸ñ */
+	/** ì œëª© */
 	private String title;
-	/** ÀúÀÚ */
+	/** ì €ì */
 	private String author;
-	/** ÃâÆÇ»ç */
+	/** ì¶œíŒì‚¬ */
 	private String publisher;
-	/** °¡°İ */
+	/** ê°€ê²© */
 	private int price;
-	/** ¼³¸í */
+	/** ì„¤ëª… */
 	private String desc;
 
 	private int quantity;
 
-	/** ±âº» »ı¼ºÀÚ */
+	/** ê¸°ë³¸ ìƒì„±ì */
 	public Book() {
 	}
 
-	/** µµ¼­ Á¤º¸¸¦ ¸ğµÎ ¹Ş¾Æ »ı¼ºÇÏ´Â »ı¼ºÀÚ */
+	/** ë„ì„œ ì •ë³´ë¥¼ ëª¨ë‘ ë°›ì•„ ìƒì„±í•˜ëŠ” ìƒì„±ì */
 	public Book(String isbn, String title, String author, String publisher, int price, String desc, int quantity) {
-		// ¹ŞÀº Á¤º¸·Î °´Ã¼ÀÇ »óÅÂ¸¦ ÃÊ±âÈ­ÇÑ´Ù.
+		// ë°›ì€ ì •ë³´ë¡œ ê°ì²´ì˜ ìƒíƒœë¥¼ ì´ˆê¸°í™”í•œë‹¤.
 		this.isbn = isbn;
 		this.title = title;
 		this.author = author;
@@ -33,90 +33,90 @@ public class Book {
 	}
 
 	/**
-	 * °íÀ¯¹øÈ£¸¦ ¹İÈ¯ÇÑ´Ù.
+	 * ê³ ìœ ë²ˆí˜¸ë¥¼ ë°˜í™˜í•œë‹¤.
 	 * 
-	 * @return °íÀ¯¹øÈ£
+	 * @return ê³ ìœ ë²ˆí˜¸
 	 */
 	public String getIsbn() {
 		return isbn;
 	}
 
 	/**
-	 * °íÀ¯¹øÈ£¸¦ ÀúÀåÇÑ´Ù.
+	 * ê³ ìœ ë²ˆí˜¸ë¥¼ ì €ì¥í•œë‹¤.
 	 * 
-	 * @param isbn : °íÀ¯¹øÈ£
+	 * @param isbn : ê³ ìœ ë²ˆí˜¸
 	 */
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
 
 	/**
-	 * Á¦¸ñÀ» ¹İÈ¯ÇÑ´Ù.
+	 * ì œëª©ì„ ë°˜í™˜í•œë‹¤.
 	 * 
-	 * @return Á¦¸ñ
+	 * @return ì œëª©
 	 */
 	public String getTitle() {
 		return title;
 	}
 
 	/**
-	 * Á¦¸ñÀ» ÀúÀåÇÑ´Ù.
+	 * ì œëª©ì„ ì €ì¥í•œë‹¤.
 	 * 
-	 * @param title : Á¦¸ñ
+	 * @param title : ì œëª©
 	 */
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
 	/**
-	 * ÀúÀÚ¸¦ ¹İÈ¯ÇÑ´Ù.
+	 * ì €ìë¥¼ ë°˜í™˜í•œë‹¤.
 	 * 
-	 * @return ÀúÀÚ
+	 * @return ì €ì
 	 */
 	public String getAuthor() {
 		return author;
 	}
 
 	/**
-	 * ÀúÀÚ¸¦ ÀúÀåÇÑ´Ù.
+	 * ì €ìë¥¼ ì €ì¥í•œë‹¤.
 	 * 
-	 * @param author : ÀúÀÚ
+	 * @param author : ì €ì
 	 */
 	public void setAuthor(String author) {
 		this.author = author;
 	}
 
 	/**
-	 * ÃâÆÇ»ç¸¦ ¹İÈ¯ÇÑ´Ù.
+	 * ì¶œíŒì‚¬ë¥¼ ë°˜í™˜í•œë‹¤.
 	 * 
-	 * @return ÃâÆÇ»ç
+	 * @return ì¶œíŒì‚¬
 	 */
 	public String getPublisher() {
 		return publisher;
 	}
 
 	/**
-	 * ÃâÆÇ»ç¸¦ ÀúÀåÇÑ´Ù.
+	 * ì¶œíŒì‚¬ë¥¼ ì €ì¥í•œë‹¤.
 	 * 
-	 * @param publisher : ÃâÆÇ»ç
+	 * @param publisher : ì¶œíŒì‚¬
 	 */
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
 
 	/**
-	 * °¡°İÀ» ¹İÈ¯ÇÑ´Ù.
+	 * ê°€ê²©ì„ ë°˜í™˜í•œë‹¤.
 	 * 
-	 * @return °¡°İ
+	 * @return ê°€ê²©
 	 */
 	public int getPrice() {
 		return price;
 	}
 
 	/**
-	 * °¡°İÀ» ÀúÀåÇÑ´Ù.
+	 * ê°€ê²©ì„ ì €ì¥í•œë‹¤.
 	 * 
-	 * @param price : °¡°İ
+	 * @param price : ê°€ê²©
 	 */
 	public void setPrice(int price) {
 		this.price = price;
@@ -131,27 +131,27 @@ public class Book {
 	}
 
 	/**
-	 * ¼³¸íÀ» ¹İÈ¯ÇÑ´Ù.
+	 * ì„¤ëª…ì„ ë°˜í™˜í•œë‹¤.
 	 * 
-	 * @return ¼³¸í
+	 * @return ì„¤ëª…
 	 */
 	public String getDesc() {
 		return desc;
 	}
 
 	/**
-	 * ¼³¸íÀ» ÀúÀåÇÑ´Ù.
+	 * ì„¤ëª…ì„ ì €ì¥í•œë‹¤.
 	 * 
-	 * @param desc : ¼³¸í
+	 * @param desc : ì„¤ëª…
 	 */
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
 
 	/**
-	 * µµ¼­ÀÇ Á¤º¸¸¦ ¹®ÀÚ¿­·Î ¹İÈ¯ÇÑ´Ù
+	 * ë„ì„œì˜ ì •ë³´ë¥¼ ë¬¸ìì—´ë¡œ ë°˜í™˜í•œë‹¤
 	 * 
-	 * @return µµ¼­Á¤º¸
+	 * @return ë„ì„œì •ë³´
 	 */
 	
 	

@@ -1,4 +1,4 @@
-package ½Ç½À8_3;
+package ì‹¤ìŠµ8_3;
 
 public class Magazine extends Book{
 	private int year;
@@ -8,7 +8,7 @@ public class Magazine extends Book{
 	}
 	
 	public Magazine(String isbn, String title, String author, String publisher, int price, String desc,int quantity, int year, int month) {
-		// ¹ŞÀº Á¤º¸·Î °´Ã¼ÀÇ »óÅÂ¸¦ ÃÊ±âÈ­ÇÑ´Ù.
+		// ë°›ì€ ì •ë³´ë¡œ ê°ì²´ì˜ ìƒíƒœë¥¼ ì´ˆê¸°í™”í•œë‹¤.
 		super(isbn, title, author, publisher, price, desc, quantity);
 		this.month = month;
 		this.year = year;

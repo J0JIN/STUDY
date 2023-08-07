@@ -1,21 +1,21 @@
-package ½Ç½À8_3;
+package ì‹¤ìŠµ8_3;
 
 /**
- * µµ¼­°íÀ¯ ¹øÈ£°¡ Á¸ÀçÇÏÁö ¾Ê´Â ¿¹¿ÜÁ¤º¸¸¦ ³ªÅ¸³»´Â Å¬·¡½º
+ * ë„ì„œê³ ìœ  ë²ˆí˜¸ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ì˜ˆì™¸ì •ë³´ë¥¼ ë‚˜íƒ€ë‚´ëŠ” í´ëž˜ìŠ¤
  */
 public class ISBNNotFoundException extends Exception {
 
-	/**	Á¸ÀçÇÏÁö ¾Ê´Â µµ¼­ °íÀ¯¹øÈ£ */
+	/**	ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ë„ì„œ ê³ ìœ ë²ˆí˜¸ */
 	private String isbn;
 	
-	/** °íÀ¯¹øÈ£¸¦ ¹Þ¾Æ »ý¼ºÇÏ´Â »ý¼ºÀÚ */
+	/** ê³ ìœ ë²ˆí˜¸ë¥¼ ë°›ì•„ ìƒì„±í•˜ëŠ” ìƒì„±ìž */
 	public ISBNNotFoundException(String isbn) {
-		super(isbn+"°íÀ¯¹øÈ£´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+		super(isbn+"ê³ ìœ ë²ˆí˜¸ëŠ” ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		this.isbn = isbn;
 	}
 	/**
-	 * Á¸ÀçÇÏÁö ¾Ê´Â µµ¼­ °íÀ¯¹øÈ£¸¦ ¹ÝÈ¯ÇÑ´Ù.
-	 * @return Á¸ÀçÇÏÁö ¾Ê´Â µµ¼­ °íÀ¯¹øÈ£
+	 * ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ë„ì„œ ê³ ìœ ë²ˆí˜¸ë¥¼ ë°˜í™˜í•œë‹¤.
+	 * @return ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ë„ì„œ ê³ ìœ ë²ˆí˜¸
 	 */
 	public String getIsbn() {
 		return isbn;
