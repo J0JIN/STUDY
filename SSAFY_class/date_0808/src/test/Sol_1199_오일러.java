@@ -59,7 +59,12 @@ public class Sol_1199_오일러 {
 		for (Node n : list.get(start.index)) {
 			if (n.vtx > 0) {
 				n.vtx--;
-				list.get(n.index).get(start.index).vtx--;
+				for (Node reverse : list.get(n.index)) {
+					if (reverse.index == start.index) {
+						reverse.vtx--;
+						break;
+					}
+				}
 				dfs(n);
 			}
 		}
