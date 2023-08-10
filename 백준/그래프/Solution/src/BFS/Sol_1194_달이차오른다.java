@@ -1,4 +1,4 @@
-package date_0810;
+package BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -84,14 +84,14 @@ public class Sol_1194_달이차오른다 {
 
 						// 'a~f' case
 						else if ('a' <= map[nx][ny] && map[nx][ny] <= 'f') {
-							int nkey = key | (1 << map[nx][ny] - 'a'); // 얻은 key를 추가해줌
+							int nkey = key | (1 << (map[nx][ny] - 'a')); // 얻은 key를 추가해줌
 							q.add(new Minsik(nx, ny, ndist, nkey));
 							visit[nx][ny][nkey] = true;
 						}
 
 						// 'A~F' case
 						else if ('A' <= map[nx][ny] && map[nx][ny] <= 'F') {
-							int nkey = 1 << map[nx][ny] - 'A'; // 사용해야 되는 키의 bit
+							int nkey = 1 << (map[nx][ny] - 'A'); // 사용해야 되는 키의 bit
 							if ((key & nkey) == nkey) { // 해당 키의 bit 비교
 								q.add(new Minsik(nx, ny, ndist, key));
 								visit[nx][ny][key] = true;

@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Sol_1199_오일러 {
 
 	static int N;
-	static ArrayList<ArrayList<Node>> list = new ArrayList<>();
+	static ArrayList<<Node>> list = new ArrayList<>();
 
 	static StringBuilder sb = new StringBuilder();
 

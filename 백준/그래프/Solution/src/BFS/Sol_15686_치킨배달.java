@@ -1,4 +1,4 @@
-package date_0810;
+package BFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,13 +7,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Sol_15686_치킨배달 {
-
 	static int N, M, total;
 	static int[][] map;
 	static boolean[][] visitMap;
 
 	static int ans = Integer.MAX_VALUE;
 	static boolean[] visit;
+
 
 	static int[] dx = { 1, 0, -1, 0 };
 	static int[] dy = { 0, -1, 0, 1 };

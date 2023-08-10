@@ -92,7 +92,7 @@ public class DiceTest {
 		// 한번 던질 떄 가능한 상황에 대한 시도(1 to 6)
 		for (int i = start; i <= 6; i++) {
 			numbers[idx] = i;
-			dice3(idx + 1, i +1);
+			dice4(idx + 1, i +1);
 		}
 	}
 	
