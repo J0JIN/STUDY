@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4da82d41-e765-483c-84e8-8e9494c96f08" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../그래프/Solution/src/BFS/Sol_15686_치킨배달2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../순열조합/Solution/src/Sol_3040_백설공주일곱난쟁.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SSAFY_class/date_0802/DiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../SSAFY_class/date_0802/DiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SSAFY_class/date_0808/src/test/Sol_1199_오일러.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../SSAFY_class/date_0808/src/test/Sol_1199_오일러.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SSAFY_class/date_0810/src/date_0810/Sol_1194_달이차오른다.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../그래프/Solution/src/BFS/Sol_1194_달이차오른다.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SSAFY_class/date_0810/src/date_0810/Sol_15686_치킨배달.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../그래프/Solution/src/BFS/Sol_15686_치킨배달.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../SSAFY_home/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../SSAFY_home/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2TnJ8qmD8kKS3b3LjcBZ6Idt6vG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/Javaworkspace/백준/DP/Solution"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4da82d41-e765-483c-84e8-8e9494c96f08" name="Changes" comment="" />
+      <created>1691672754491</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691672754491</updated>
+    </task>
+    <servers />
+  </component>
+</project>
