@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b83fc325-35a8-4eae-9fbe-526b0d4bc84c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../B형 특강/Solution/src/Sol_1074_Z.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../그래프/Solution/src/BFS/Sol_4963_섬의개수BFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../그래프/Solution/src/DFS/Sol_4963_섬의개수DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../그래프/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../그래프/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +22,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/Javaworkspace/백준",
+    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/Javaworkspace/백준/분할정복/Solution",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
