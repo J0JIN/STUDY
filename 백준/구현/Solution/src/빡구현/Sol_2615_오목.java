@@ -1,3 +1,5 @@
+package 빡구현;
+
 import java.util.Scanner;
 
 public class Sol_2615_오목 {

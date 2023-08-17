@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/_1_Week/_1_Week.iml" filepath="$PROJECT_DIR$/_1_Week/_1_Week.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_2_Week/_2_Week.iml" filepath="$PROJECT_DIR$/_2_Week/_2_Week.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_3_Week/_3_Week.iml" filepath="$PROJECT_DIR$/_3_Week/_3_Week.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4_Week/_4_Week.iml" filepath="$PROJECT_DIR$/_4_Week/_4_Week.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/알고리즘 스터디.iml" filepath="$PROJECT_DIR$/.idea/알고리즘 스터디.iml" />
+    </modules>
+  </component>
+</project>
