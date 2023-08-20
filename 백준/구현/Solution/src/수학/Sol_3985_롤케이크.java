@@ -1,3 +1,5 @@
+package 수학;
+
 import java.util.Scanner;
 
 public class Sol_3985_롤케이크 {
