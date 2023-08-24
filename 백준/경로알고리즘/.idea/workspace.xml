@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c072645-d72d-42b1-a8e7-27409d96a130" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../그래프/Solution/src/위상정렬/Sol_2252_줄세우기.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SWEA/Solution/src/SWEA_1238_Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../구현/Solution/src/못푼문제/SWEA_14510_나무높이.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SWEA/Solution/src/SWEA_14510_나무높이.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복/_5_Week/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복/_5_Week/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복/_5_Week/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복/_5_Week/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복/_5_Week/_5_Week.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복/_5_Week/src/Sol_17070_파이프옮기기1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복/_5_Week/src/Sol_3190_뱀.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복/_5_Week/src/Sol_7562_나이트의이동.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +30,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/Javaworkspace/백준/경로알고리즘",
+    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/Javaworkspace/백준/경로알고리즘/Solution",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"

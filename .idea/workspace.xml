@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9ec247a-267c-44b3-9122-7dcc1797d45c" name="Changes" comment="" />
+    <list default="true" id="a9ec247a-267c-44b3-9122-7dcc1797d45c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/백준/구현/Solution/src/못푼문제/SWEA_14510_나무높이.java" beforeDir="false" afterPath="$PROJECT_DIR$/SWEA/Solution/src/SWEA_14510_나무높이.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/분할정복/_5_Week/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/분할정복/_5_Week/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/분할정복/_5_Week/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/분할정복/_5_Week/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/분할정복/_5_Week/_5_Week.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/분할정복/_5_Week/src/Sol_17070_파이프옮기기1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/분할정복/_5_Week/src/Sol_3190_뱀.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/백준/분할정복/_5_Week/src/Sol_7562_나이트의이동.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
