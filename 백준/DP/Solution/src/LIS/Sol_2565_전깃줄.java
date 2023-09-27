@@ -1,4 +1,4 @@
-package 못푼문제;
+package LIS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
