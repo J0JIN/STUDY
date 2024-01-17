@@ -4,44 +4,21 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Sol_7662_이중우선순위큐_못품 {
+
+    private static PriorityQueue<Integer> minQ;
+    private static PriorityQueue<Integer> maxQ;
+    private static HashMap<Integer, Integer> deleteItem;
+
     public static void main(String[] args) throws IOException {
 
+        StringBuilder sb = new StringBuilder();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int tc = Integer.parseInt(br.readLine());
 
         for (int t = 1; t <= tc; t++) {
             int T = Integer.parseInt(br.readLine());
 
-            Queue<Integer> minQ = new PriorityQueue<>(new Comparator<Integer>() {
-                @Override
-                public int compare(Integer o1, Integer o2) {
-                    return o1 - o2;
-                }
-            });
-
-            Queue<Integer> maxQ = new PriorityQueue<>(new Comparator<Integer>() {
-                @Override
-                public int compare(Integer o1, Integer o2) {
-                    return o2 - o1;
-                }
-            });
-
-            Queue<Integer> store_minQ = new PriorityQueue<>(new Comparator<Integer>() {
-                @Override
-                public int compare(Integer o1, Integer o2) {
-                    return o1 - o2;
-                }
-            });
-
-            Queue<Integer> store_maxQ = new PriorityQueue<>(new Comparator<Integer>() {
-                @Override
-                public int compare(Integer o1, Integer o2) {
-                    return o2 - o1;
-                }
-            });
-
-            int I_count = 0;
-            int D_count = 0;
+            init();
 
             for (int i = 0; i < T; i++) {
                 StringTokenizer st = new StringTokenizer(br.readLine());
@@ -50,32 +27,65 @@ public class Sol_7662_이중우선순위큐_못품 {
 
                 switch (cmd) {
                     case "I":
-                        minQ.offer(num);
-                        maxQ.offer(num);
+                        insert(num);
                         break;
                     case "D":
+                        if (deleteItem.size() == 0) continue;
 
-                        if (num == 1 && !maxQ.isEmpty()) {
-                            minQ.remove(maxQ.poll());
+                        if (num == 1) {
+                            delete(maxQ);
+                        } else {
+                            delete(minQ);
                         }
-
-                        if (num == -1 && !minQ.isEmpty()) {
-                            maxQ.remove(minQ.poll());
-                        }
-
-//                        System.out.println(maxQ.toString());
-//                        System.out.println(minQ.toString());
-//                        System.out.println("---------------");
-
                         break;
                 }
+
             }
-            if (minQ.isEmpty()) {
-                System.out.println("EMPTY");
+
+            if (deleteItem.size() == 0) {
+                sb.append("EMPTY\n");
             } else {
-                System.out.println(maxQ.poll() + " " + minQ.poll());
+                int res = delete(maxQ);
+                sb.append(res + " ");
+
+                if (deleteItem.size() > 0) {
+                    res = delete(minQ);
+                }
+                sb.append(res + "\n");
             }
         }
 
+        System.out.println(sb.toString());
     }
+
+    public static void init() {
+        minQ = new PriorityQueue<>();
+        maxQ = new PriorityQueue<>(Collections.reverseOrder());
+        deleteItem = new HashMap<>();
+    }
+
+    public static void insert(int number) {
+        minQ.add(number);
+        maxQ.add(number);
+        deleteItem.put(number, deleteItem.getOrDefault(number, 0) + 1);
+    }
+
+    static int delete(Queue<Integer> q) {
+        int res = 0;
+        while (true) {
+            res = q.poll();
+            int cnt = deleteItem.getOrDefault(res, 0);
+
+            if (cnt == 0) {
+                continue;
+            } else if (cnt == 1) {
+                deleteItem.remove(res);
+            } else {
+                deleteItem.put(res, cnt - 1);
+            }
+            break;
+        }
+        return res;
+    }
+
 }
