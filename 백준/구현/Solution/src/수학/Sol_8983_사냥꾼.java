@@ -34,23 +34,38 @@ public class Sol_8983_사냥꾼 {
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
 
-            if (y - L <= 0) {
-                int upper = x - y + L;
-                int under = x + y - L;
-
-                if (under < 0) {
-                    under = 0;
-                }
+            if (y <= L) {
+                int upper = x + (L - y);
+                int under = x - (L - y);
                 animals.add(new Animal(under, upper));
             }
         }
         Collections.sort(animals);
 
-
         int ans = 0;
-        for(int i = 0; i < hunter.size();i++){
-            hunter.get(i)
+        for (Animal animal : animals) {
+            if (isCatchable(hunter, animal)) {
+                ans++;
+            }
         }
+        System.out.println(ans);
+    }
+
+    private static boolean isCatchable(List<Integer> hunter, Animal animal) {
+        int left = 0;
+        int right = hunter.size() - 1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (hunter.get(mid) >= animal.under && hunter.get(mid) <= animal.upper) {
+                return true;
+            } else if (hunter.get(mid) < animal.under) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return false;
     }
 
     private static class Animal implements Comparable<Animal> {
@@ -63,17 +78,8 @@ public class Sol_8983_사냥꾼 {
         }
 
         @Override
-        public String toString() {
-            return "Animal{" +
-                    "under=" + under +
-                    ", upper=" + upper +
-                    '}';
-        }
-
-        @Override
         public int compareTo(Animal o) {
             return this.under - o.under;
         }
     }
-
 }
