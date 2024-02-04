@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="edacc0bf-a2e3-484f-aa2b-5b120000935f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../그래프/Solution/src/BFS/Sol_15686_치킨배달2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../재귀/Solution/src/Sol_3040_백설공주일곱난쟁.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../SSAFY_class/date_0808/src/test/Sol_1199_오일러.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../SSAFY_class/date_0808/src/test/Sol_1199_오일러.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../SSAFY_class/date_0810/src/date_0810/Sol_1194_달이차오른다.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../그래프/Solution/src/BFS/Sol_1194_달이차오른다.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../SSAFY_class/date_0810/src/date_0810/Sol_15686_치킨배달.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../그래프/Solution/src/BFS/Sol_15686_치킨배달.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../그리디/Sol_1339_단어수학_배열.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../그리디/Sol_1339_단어수학_해쉬맵.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../그래프/Solution/src/DFS/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../그래프/Solution/src/DFS/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +25,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/Javaworkspace/백준/순열조합/Solution"
+    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/GitHub/Javaworkspace/백준"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
