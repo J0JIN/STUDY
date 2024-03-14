@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21ec0e8e-c030-4297-9a27-1918d4a75837" name="Changes" comment="" />
+    <list default="true" id="21ec0e8e-c030-4297-9a27-1918d4a75837" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../경로알고리즘/Solution/src/다익스트라/Sol_10282_해킹.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../유니온파인드/Solution/src/Sol_4195_친구네트워크.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +21,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/Javaworkspace/백준/그래프/Solution"
+    "last_opened_file_path": "C:/Users/ttori/OneDrive/바탕 화면/GitHub/Javaworkspace/백준/그래프/Solution"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
